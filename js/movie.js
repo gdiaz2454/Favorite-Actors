@@ -14,7 +14,7 @@ var actors = [{
     full:"Images/will-smith.jpeg"
   }]
 },{
-  name:"Eva mendes",
+  name:"Eva Mendes",
   favMovie:"Hitch",
   movieD:"She isn't a super star actor but she is definitely gorgeous!",
   images:[{
@@ -73,3 +73,9 @@ var actors = [{
 myActors.controller("myController",function($scope){
   $scope.actors = actors;
 });
+myActors.controller("panelController",function($scope){
+  $scope.tab = 1;
+  $scope.selectTab = function(newTab){
+    $scope.tab = newTab;
+  }
+})

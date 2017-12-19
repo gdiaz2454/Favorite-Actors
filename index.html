@@ -24,8 +24,23 @@
           <img ng-repeat="image in actors.images" ng-src="{{image.full}}" alt="Images of movie stars">
           <div class="card-body">
             <h3>{{actors.name}}</h3>
-            <h5>{{actors.favMovie}}</h5>
-            <p>{{actors.movieD}}</p>
+            <section ng-controller="panelController">
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link" ng-class="{active:tab === 1}" ng-click="selectTab(1)">Actor Description</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" ng-class="{active:tab === 2}" ng-click="selectTab(2)">Favorite movie</a>
+                </li>
+              </ul>
+              <div class="panel" ng-show="tab === 1">
+                <p>{{actors.movieD}}</p>
+              </div>
+              <div class="panel" ng-show="tab === 2">
+                <p>{{actors.favMovie}}</p>
+              </div>
+
+            </section>
           </div>
         </div>
       </div>
