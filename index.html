@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Movie Stars</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/movie.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="js/movie.js"></script>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <body ng-app="myactors">
+    <div class="container">
+      <div class="jumbotron text-center" >
+        <div class="jhead"><h1>My Favorite Movie Stars</h1></div>
+      </div>
+    </div>
+    <div ng-controller="myController">
+      <div class="container">
+      <div class="row">
+        <div ng-repeat="actors in actors" class="card text-white bg-secondary mb-3" style="width: 20rem;">
+          <img ng-repeat="image in actors.images" ng-src="{{image.full}}" alt="Images of movie stars">
+          <div class="card-body">
+            <h3>{{actors.name}}</h3>
+            <h5>{{actors.favMovie}}</h5>
+            <p>{{actors.movieD}}</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
